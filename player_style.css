@@ -1,0 +1,230 @@
+﻿/* ОБЩЕЕ */
+
+/* Если нужно задать цвет везде разом — можно поменять здесь, 
+или указать цвет отдельно для каждого нужного элемента ниже по списку */
+:root {
+    --facecast-primary: rgb(205, 225, 6);
+    --facecast-darker: #A5B405;
+}
+
+/* Фиолетовая полосочка слева от названия */
+.css-1pecpgp::before,
+.css-nxg9of::before,
+.css-py6w8e::before {
+    background-color: var(--facecast-primary) !important;
+}
+
+/* Ссылки */
+label a, .userreg__footer a {
+    color: var(--facecast-primary) !important;
+    text-decoration: none !important;
+}
+a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* УПРАВЛЕНИЕ ВОСПРОИЗВЕДЕНИЕМ */
+
+/* Анимация загрузки плеера */
+.spinner-three-bounce[data-spinner]:not(.is-mobile) > div,
+.spinner-three-bounce-player-preloader div,
+.spinner-three-bounce[data-spinner].is-mobile > div {
+    border-top-color: var(--facecast-primary);
+    border-right-color: var(--facecast-primary);
+    border-bottom-color: var(--facecast-primary);
+}
+
+/* Точка текущей позиции воспроизведения */
+.media-control-layer[data-controls] .media-control-center-panel[data-media-control] .fragment-element__container .fragment-element__seek-scrubber,
+.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-scrubber[data-seekbar],
+.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-scrubber[data-seekbar] .bar-scrubber-icon[data-seekbar],
+.live-dvr-seekbar > .live-dvr-seekbar-scrubber,
+.media-control[data-media-control] .media-control-layer[data-controls] 
+.media-control-volume-bar[data-volume] .media-control-volume-bar-scrubber[data-volume]::after {
+    background: var(--facecast-primary);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Спрячем точку внутри точки */
+.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-scrubber[data-seekbar] .bar-scrubber-icon[data-seekbar] {
+    display: none;
+}
+
+/* Загруженный буфер */
+.media-control[data-media-control] .media-control-layer[data-controls] .bar-container[data-seekbar] .bar-background[data-seekbar] .bar-fill-2[data-seekbar],
+.media-control-layer[data-controls] .media-control-center-panel[data-media-control] .fragment-element__container .fragment-element__dot .fragment-element__progress {
+    background: var(--facecast-primary);
+}
+
+/* Заполненная полоска живого эфира */
+.live-dvr-seekbar > .live-dvr-seekbar-background > .live-dvr-seekbar-background-fill-2 {
+    background: var(--facecast-primary) !important;
+}
+
+/* Ховер эпизода */
+.media-control-layer[data-controls] .media-control-center-panel[data-media-control] .fragment-element__container .fragment-element__dot:hover {
+    background: var(--facecast-primary);
+}
+
+/* Полоска громкости */
+.media-control[data-media-control] .media-control-layer[data-controls] .media-control-volume-bar[data-volume] .media-control-volume-bar-on[data-volume] {
+    background: var(--facecast-primary);
+}
+
+/* Точка текущего уровня звука */
+.media-control[data-media-control] .media-control-layer[data-controls] .media-control-volume-bar[data-volume] .media-control-volume-bar-scrubber[data-volume] {
+    background: var(--facecast-primary);
+}
+
+/* Кнопка перехода к прямому эфиру */
+.dvr-controls[data-dvr-controls] .live-info svg path,
+.dvr-controls[data-dvr-controls] .live-button svg path {
+    fill: var(--facecast-primary);
+}
+
+/* Более мягкий градиент */
+.media-control-background{
+    background: linear-gradient(180deg, 
+    rgba(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0.01) 6.67%, 
+    rgba(0, 0, 0, 0.04) 13.33%, 
+    rgba(0, 0, 0, 0.08) 20%, 
+    rgba(0, 0, 0, 0.14) 26.67%, 
+    rgba(0, 0, 0, 0.24) 33.33%, 
+    rgba(0, 0, 0, 0.34) 40%, 
+    rgba(0, 0, 0, 0.44) 46.67%, 
+    rgba(0, 0, 0, 0.56) 53.33%, 
+    rgba(0, 0, 0, 0.66) 60%, 
+    rgba(0, 0, 0, 0.76) 66.67%, 
+    rgba(0, 0, 0, 0.86) 73.33%, 
+    rgba(0, 0, 0, 0.92) 80%, 
+    rgba(0, 0, 0, 0.96) 90.1%, 
+    rgba(0, 0, 0, 0.98) 100%) !important;
+}
+
+
+/* КНОПКИ, ССЫЛКИ И ПРОЧЕЕ */
+
+/* Кнопки */
+.Iframe_body .LNIframe .auth_body form #auth-btn,
+.Iframe_body .LNIframe .auth_body form #buy-btn,
+.Iframe_body .LNIframe .auth_body form #us-auth-btn,
+.Iframe_body .LNIframe .alert_window_popup .sbtn-alert-confirm,
+.Iframe_body .LNIframe .viewer_presence_window_popup .sbtn-alert-confirm,
+.player-mobile-wrap .auth_body form #auth-btn,
+.player-mobile-wrap .auth_body form #buy-btn,
+.player-mobile-wrap .auth_body form #us-auth-btn,
+.player-mobile-wrap .alert_window_popup .sbtn-alert-confirm,
+.player-mobile-wrap .viewer_presence_window_popup .sbtn-alert-confirm,
+.userreg .userreg__btn, #auth-toggle button,
+.polls-custom-choice-form-foot button,
+.hcc.hc__authorization.e__hc__popup .hc__authorization__box .hcc[el="Guest"] 
+.hc__authorization__anonim .hc__authorization__send .hc__authorization__send__txt,
+.episodes-navigation-episode-fragment.active, .episodes-navigation-episode.active:not(.fragment-active) > .headline,
+.css-1xhw5f1, .e1p7nqe80
+{
+    background: var(--facecast-darker) !important;
+    transition: all 300ms linear;
+}
+
+/* Ховер кнопок */
+.Iframe_body .LNIframe .auth_body form #auth-btn:hover,
+.Iframe_body .LNIframe .auth_body form #buy-btn:hover,
+.Iframe_body .LNIframe .auth_body form #us-auth-btn:hover,
+.Iframe_body .LNIframe .alert_window_popup .sbtn-alert-confirm:hover,
+.Iframe_body .LNIframe .viewer_presence_window_popup .sbtn-alert-confirm:hover,
+.player-mobile-wrap .auth_body form #auth-btn:hover,
+.player-mobile-wrap .auth_body form #buy-btn:hover,
+.player-mobile-wrap .auth_body form #us-auth-btn:hover,
+.player-mobile-wrap .alert_window_popup .sbtn-alert-confirm:hover,
+.player-mobile-wrap .viewer_presence_window_popup .sbtn-alert-confirm:hover,
+.userreg .userreg__btn:hover, #auth-toggle button:hover,
+.polls-custom-choice-form-foot button:hover,
+.hcc.hc__authorization.e__hc__popup .hc__authorization__box .hcc[el="Guest"] 
+.hc__authorization__anonim .hc__authorization__send .hc__authorization__send__txt:hover,
+.episodes-navigation-episode-fragment.active, .episodes-navigation-episode.active:not(.fragment-active) > .headline:hover  {
+    background: var(--facecast-primary);
+}
+
+/* Кнопки ответа на опрос */
+.polls-overlay .polls-overlay__choices .choice:hover {
+    background: var(--facecast-primary);
+}
+
+
+/* Поля ввода */
+.userreg__body__name:focus-within::after,
+.userreg__body__email:focus-within::after,
+.userreg__body__phone:focus-within::after,
+.userreg__body__custom:focus-within::after {
+    border-color: var(--facecast-primary);
+}
+
+/* Боковая панель */
+
+/* Текущая вкладка в боковой панели */
+#player_wrap_right_panel > .right-panel-header .item > .item-underline {
+    background: var(--facecast-primary);
+}
+
+
+
+/* Счётчик «Срок действия вашего пароля». Чтобы отключить, удалите звёзочки и слэши до и после */
+
+/*
+.ticket-lifetime-popup {
+    display: none;
+}
+*/
+
+
+
+/* ФОРМА РЕГИСТРАЦИИ */
+
+/* Сообщение, если зритель убрал галочку */
+.userreg__body__accept-error .userreg__error_field {
+    padding: 0px;
+    margin: 4px 0px 0px -98px;
+    color: #28242D;
+}
+.userreg__body__accept-error .userreg__error_field:after {
+    content: "Для просмотра необходимо ваше согласие";
+    color: #f00;
+}
+
+/* Кнопка «Зарегистрироваться» */
+.userreg .userreg__btn {
+    max-width: 280px;
+}
+
+/* Доп. сообщения после формы регистрации */
+.userreg__footer  {
+    padding: 0px;
+    margin: 24px;
+}
+
+/* Ссылка «Есть код?» */
+.userreg-goback {
+    width: auto !important;
+}
+
+/* Предупреждение, если включено подтверждение входа */
+.userreg__warning,
+.userreg_phone_warning {
+	margin: 16px 0 0 0;
+}
+
+
+
+
+
+
+
+/* Скрыть дублирующую кнопку открытия чата */
+
+/*
+#chat-arrow-btn {
+    display: none;
+}
+ */
