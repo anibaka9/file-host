@@ -217,7 +217,9 @@ a:hover {
 
 
 
-
+.app_announcement__event_description {
+    height: 0px;
+}
 
 
 
